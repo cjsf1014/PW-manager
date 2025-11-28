@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center"
+    android:background="@color/colorBackground">
+
+    <!-- 应用图标和标题 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🔐"
+        android:textSize="64sp"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="P W manager"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="@color/textColorPrimary"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="密码管理器"
+        android:textSize="18sp"
+        android:textColor="@color/textColorSecondary"
+        android:layout_marginBottom="48dp" />
+
+    <!-- 主密码输入框 -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:hint="请输入主密码">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/masterPasswordEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:textColor="@color/textColorPrimary"
+            android:textColorHint="@android:color/darker_gray" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- 验证按钮 -->
+    <Button
+        android:id="@+id/verifyButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="验证并进入"
+        android:textSize="16sp"
+        android:padding="16dp" />
+
+    <TextView
+        android:id="@+id/loginTipsText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="首次使用请设置主密码。忘记主密码后，所有已保存的密码无法找回；重置主密码将清除所有数据。"
+        android:textColor="@color/textColorSecondary"
+        android:textSize="12sp"
+        android:layout_marginTop="12dp" />
+
+    <Button
+        android:id="@+id/changeMasterOnLoginButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="修改主密码"
+        android:textSize="16sp"
+        android:padding="16dp"
+        android:layout_marginTop="12dp" />
+
+    <Button
+        android:id="@+id/resetAllDataButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="忘记主密码，清除所有数据"
+        android:textSize="16sp"
+        android:padding="16dp"
+        android:layout_marginTop="8dp" />
+
+    <!-- 错误提示 -->
+    <TextView
+        android:id="@+id/errorTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@android:color/holo_red_light"
+        android:layout_marginTop="16dp"
+        android:visibility="gone" />
+
+</LinearLayout>

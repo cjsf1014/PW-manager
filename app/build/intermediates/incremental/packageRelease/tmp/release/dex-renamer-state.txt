@@ -1,0 +1,7 @@
+#Fri Nov 28 12:03:09 CST 2025
+base.0=D\:\\HW\\Documents\\porject\\android\\open_code\\app\\build\\intermediates\\dex\\release\\mergeDexRelease\\classes.dex
+base.1=D\:\\HW\\Documents\\porject\\android\\open_code\\app\\build\\intermediates\\global_synthetics_dex\\release\\mergeReleaseGlobalSynthetics\\classes.dex
+path.0=classes.dex
+path.1=classes.dex
+renamed.0=classes.dex
+renamed.1=classes2.dex

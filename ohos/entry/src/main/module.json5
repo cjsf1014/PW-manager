@@ -1,0 +1,9 @@
+{
+  "module": {
+    "name": "entry",
+    "type": "entry",
+    "srcEntry": "./ets/pages/Index.ets",
+    "deviceTypes": ["phone"],
+    "installationFree": false
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "app": {
+    "bundleName": "com.vaultai.app",
+    "versionCode": 1,
+    "versionName": "1.0.0",
+    "icon": "$media:icon",
+    "label": "PW Manager"
+  }
+}

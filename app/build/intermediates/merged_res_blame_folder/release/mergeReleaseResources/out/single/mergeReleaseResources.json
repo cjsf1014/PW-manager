@@ -1,0 +1,202 @@
+[
+    {
+        "merged": "com.vaultai.app-release-29:/drawable-land-xxhdpi_splash.png.flat",
+        "source": "com.vaultai.app-main-30:/drawable-land-xxhdpi/splash.png"
+    },
+    {
+        "merged": "com.vaultai.app-release-29:/mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "com.vaultai.app-main-30:/mipmap-xxxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.vaultai.app-release-29:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.vaultai.app-main-30:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.vaultai.app-release-29:/mipmap-mdpi_ic_launcher_foreground.png.flat",
+        "source": "com.vaultai.app-main-30:/mipmap-mdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.vaultai.app-release-29:/drawable-land-xxxhdpi_splash.png.flat",
+        "source": "com.vaultai.app-main-30:/drawable-land-xxxhdpi/splash.png"
+    },
+    {
+        "merged": "com.vaultai.app-release-29:/drawable_ic_lock.xml.flat",
+        "source": "com.vaultai.app-main-30:/drawable/ic_lock.xml"
+    },
+    {
+        "merged": "com.vaultai.app-release-29:/drawable-land-xhdpi_splash.png.flat",
+        "source": "com.vaultai.app-main-30:/drawable-land-xhdpi/splash.png"
+    },
+    {
+        "merged": "com.vaultai.app-release-29:/layout_dialog_change_master_password.xml.flat",
+        "source": "com.vaultai.app-main-30:/layout/dialog_change_master_password.xml"
+    },
+    {
+        "merged": "com.vaultai.app-release-29:/layout_item_password_card.xml.flat",
+        "source": "com.vaultai.app-main-30:/layout/item_password_card.xml"
+    },
+    {
+        "merged": "com.vaultai.app-release-29:/layout_activity_login.xml.flat",
+        "source": "com.vaultai.app-main-30:/layout/activity_login.xml"
+    },
+    {
+        "merged": "com.vaultai.app-release-29:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.vaultai.app-main-30:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.vaultai.app-release-29:/xml_config.xml.flat",
+        "source": "com.vaultai.app-main-30:/xml/config.xml"
+    },
+    {
+        "merged": "com.vaultai.app-release-29:/drawable_ic_search.xml.flat",
+        "source": "com.vaultai.app-main-30:/drawable/ic_search.xml"
+    },
+    {
+        "merged": "com.vaultai.app-release-29:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "com.vaultai.app-main-30:/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.vaultai.app-release-29:/drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "com.vaultai.app-main-30:/drawable-v24/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.vaultai.app-release-29:/drawable_ic_delete.xml.flat",
+        "source": "com.vaultai.app-main-30:/drawable/ic_delete.xml"
+    },
+    {
+        "merged": "com.vaultai.app-release-29:/layout_dialog_add_password.xml.flat",
+        "source": "com.vaultai.app-main-30:/layout/dialog_add_password.xml"
+    },
+    {
+        "merged": "com.vaultai.app-release-29:/drawable_ic_visibility_off.xml.flat",
+        "source": "com.vaultai.app-main-30:/drawable/ic_visibility_off.xml"
+    },
+    {
+        "merged": "com.vaultai.app-release-29:/drawable_ic_edit.xml.flat",
+        "source": "com.vaultai.app-main-30:/drawable/ic_edit.xml"
+    },
+    {
+        "merged": "com.vaultai.app-release-29:/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "com.vaultai.app-main-30:/mipmap-xxxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.vaultai.app-release-29:/drawable_ic_language.xml.flat",
+        "source": "com.vaultai.app-main-30:/drawable/ic_language.xml"
+    },
+    {
+        "merged": "com.vaultai.app-release-29:/mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "com.vaultai.app-main-30:/mipmap-mdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.vaultai.app-release-29:/layout-land_activity_main.xml.flat",
+        "source": "com.vaultai.app-main-30:/layout-land/activity_main.xml"
+    },
+    {
+        "merged": "com.vaultai.app-release-29:/layout_activity_password_manager.xml.flat",
+        "source": "com.vaultai.app-main-30:/layout/activity_password_manager.xml"
+    },
+    {
+        "merged": "com.vaultai.app-release-29:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "com.vaultai.app-main-30:/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.vaultai.app-release-29:/drawable_ic_note.xml.flat",
+        "source": "com.vaultai.app-main-30:/drawable/ic_note.xml"
+    },
+    {
+        "merged": "com.vaultai.app-release-29:/mipmap-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "com.vaultai.app-main-30:/mipmap-xxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.vaultai.app-release-29:/mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "com.vaultai.app-main-30:/mipmap-hdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.vaultai.app-release-29:/mipmap-hdpi_ic_launcher_foreground.png.flat",
+        "source": "com.vaultai.app-main-30:/mipmap-hdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.vaultai.app-release-29:/mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "com.vaultai.app-main-30:/mipmap-xxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.vaultai.app-release-29:/drawable-port-mdpi_splash.png.flat",
+        "source": "com.vaultai.app-main-30:/drawable-port-mdpi/splash.png"
+    },
+    {
+        "merged": "com.vaultai.app-release-29:/drawable_ic_person.xml.flat",
+        "source": "com.vaultai.app-main-30:/drawable/ic_person.xml"
+    },
+    {
+        "merged": "com.vaultai.app-release-29:/drawable-port-hdpi_splash.png.flat",
+        "source": "com.vaultai.app-main-30:/drawable-port-hdpi/splash.png"
+    },
+    {
+        "merged": "com.vaultai.app-release-29:/drawable_ic_more_vert.xml.flat",
+        "source": "com.vaultai.app-main-30:/drawable/ic_more_vert.xml"
+    },
+    {
+        "merged": "com.vaultai.app-release-29:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.vaultai.app-main-30:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.vaultai.app-release-29:/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "com.vaultai.app-main-30:/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.vaultai.app-release-29:/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "com.vaultai.app-main-30:/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.vaultai.app-release-29:/layout_activity_main.xml.flat",
+        "source": "com.vaultai.app-main-30:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.vaultai.app-release-29:/drawable-land-mdpi_splash.png.flat",
+        "source": "com.vaultai.app-main-30:/drawable-land-mdpi/splash.png"
+    },
+    {
+        "merged": "com.vaultai.app-release-29:/mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "com.vaultai.app-main-30:/mipmap-xhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.vaultai.app-release-29:/drawable-port-xhdpi_splash.png.flat",
+        "source": "com.vaultai.app-main-30:/drawable-port-xhdpi/splash.png"
+    },
+    {
+        "merged": "com.vaultai.app-release-29:/drawable-port-xxxhdpi_splash.png.flat",
+        "source": "com.vaultai.app-main-30:/drawable-port-xxxhdpi/splash.png"
+    },
+    {
+        "merged": "com.vaultai.app-release-29:/drawable-land-hdpi_splash.png.flat",
+        "source": "com.vaultai.app-main-30:/drawable-land-hdpi/splash.png"
+    },
+    {
+        "merged": "com.vaultai.app-release-29:/mipmap-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "com.vaultai.app-main-30:/mipmap-xhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.vaultai.app-release-29:/xml_file_paths.xml.flat",
+        "source": "com.vaultai.app-main-30:/xml/file_paths.xml"
+    },
+    {
+        "merged": "com.vaultai.app-release-29:/drawable-port-xxhdpi_splash.png.flat",
+        "source": "com.vaultai.app-main-30:/drawable-port-xxhdpi/splash.png"
+    },
+    {
+        "merged": "com.vaultai.app-release-29:/drawable_ic_content_copy.xml.flat",
+        "source": "com.vaultai.app-main-30:/drawable/ic_content_copy.xml"
+    },
+    {
+        "merged": "com.vaultai.app-release-29:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "com.vaultai.app-main-30:/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.vaultai.app-release-29:/drawable_splash.png.flat",
+        "source": "com.vaultai.app-main-30:/drawable/splash.png"
+    },
+    {
+        "merged": "com.vaultai.app-release-29:/drawable_ic_visibility.xml.flat",
+        "source": "com.vaultai.app-main-30:/drawable/ic_visibility.xml"
+    }
+]

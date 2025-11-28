@@ -1,0 +1,129 @@
+apply plugin: 'com.android.application'
+
+def bumpOnBuild = gradle.startParameter.taskNames.any { t ->
+    def name = t.toLowerCase()
+    name.contains('assemble') || name.contains('bundle') || name.contains('install')
+}
+def propsFile = file("${rootDir}/gradle.properties")
+def props = new Properties()
+if (propsFile.exists()) {
+    propsFile.withInputStream { props.load(it) }
+    if (bumpOnBuild) {
+        def p = (props.getProperty('VERSION_PATCH', '0') as String).toInteger() + 1
+        props.setProperty('VERSION_PATCH', p.toString())
+        props.store(new FileOutputStream(propsFile), null)
+        println "Version bumped to ${props.getProperty('VERSION_MAJOR','9')}.${props.getProperty('VERSION_MINOR','0')}.${p}"
+    }
+}
+def vMajorProp = props.getProperty('VERSION_MAJOR', '9') as String
+def vMinorProp = props.getProperty('VERSION_MINOR', '0') as String
+def vPatchProp = props.getProperty('VERSION_PATCH', '0') as String
+
+android {
+    def ksPath = System.getenv('ANDROID_KEYSTORE_PATH')
+    def ksPass = System.getenv('ANDROID_KEYSTORE_PASSWORD')
+    def keyAliasEnv = System.getenv('ANDROID_KEY_ALIAS')
+    def keyPass = System.getenv('ANDROID_KEY_PASSWORD')
+    def hasSigning = ksPath != null && ksPass != null && keyAliasEnv != null && keyPass != null
+
+    if (hasSigning) {
+        signingConfigs {
+            release {
+                storeFile file(ksPath)
+                storePassword ksPass
+                keyAlias keyAliasEnv
+                keyPassword keyPass
+                enableV1Signing true
+                enableV2Signing true
+            }
+        }
+    }
+    namespace "com.vaultai.app"
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    defaultConfig {
+        applicationId "com.vaultai.app"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        def vMajor = vMajorProp.toInteger()
+        def vMinor = vMinorProp.toInteger()
+        def vPatch = vPatchProp.toInteger()
+        versionCode vMajor * 10000 + vMinor * 100 + vPatch
+        versionName "${vMajor}.${vMinor}.${vPatch}"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+        aaptOptions {
+             // Files and dirs to omit from the packaged assets dir, modified to accommodate modern web apps.
+             // Default: https://android.googlesource.com/platform/frameworks/base/+/282e181b58cf72b6ca770dc7ca5f91f135444502/tools/aapt/AaptAssets.cpp#61
+            ignoreAssetsPattern '!.svn:!.git:!.ds_store:!*.scc:.*:!CVS:!thumbs.db:!picasa.ini:!*~'
+        }
+    }
+    
+    
+    
+    buildTypes {
+        release {
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            if (hasSigning) {
+                signingConfig signingConfigs.release
+            }
+        }
+    }
+    
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    packagingOptions {
+        resources {
+            excludes += ['META-INF/LICENSE*', 'META-INF/NOTICE*', 'META-INF/AL2.0', 'META-INF/LGPL2.1']
+        }
+    }
+
+    lint {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+    applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            def vName = defaultConfig.versionName
+            outputFileName = "${variant.buildType.name}${vName}.apk"
+        }
+    }
+}
+
+repositories {
+    flatDir{
+        dirs '../capacitor-cordova-android-plugins/src/main/libs', 'libs'
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "androidx.appcompat:appcompat:$androidxAppCompatVersion"
+    implementation "androidx.coordinatorlayout:coordinatorlayout:$androidxCoordinatorLayoutVersion"
+    implementation "androidx.core:core-splashscreen:$coreSplashScreenVersion"
+    implementation 'com.google.android.material:material:1.9.0'
+    implementation "androidx.cardview:cardview:1.0.0"
+    // implementation project(':capacitor-android')
+    testImplementation "junit:junit:$junitVersion"
+    androidTestImplementation "androidx.test.ext:junit:$androidxJunitVersion"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$androidxEspressoCoreVersion"
+    // implementation project(':capacitor-cordova-android-plugins')
+}
+
+// apply from: 'capacitor.build.gradle'
+
+try {
+    def servicesJSON = file('google-services.json')
+    if (servicesJSON.text) {
+        apply plugin: 'com.google.gms.google-services'
+    }
+} catch(Exception e) {
+    logger.info("google-services.json not found, google-services plugin not applied. Push Notifications won't work")
+}
+
+// 版本号已在配置阶段按需递增，无需额外任务
